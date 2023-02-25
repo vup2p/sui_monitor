@@ -5,7 +5,8 @@ then
   sudo apt update
   sudo apt install -y jq
 fi
-
+echo $(date)  
+echo '-------------------------------------'
 read -r -p "Enter MY NODE IP (Default is localhost) : " IP
 if [ ! -n "$IP" ]; then 
   IP="localhost"
@@ -19,7 +20,7 @@ if [ ! -n "$SUI" ]; then
 fi
 
 echo '-------------------------------------'
-echo $(date)    
+
 echo "MYNODE: " $IP
 echo "NETWORK: " $SUI
 echo
